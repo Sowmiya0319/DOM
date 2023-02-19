@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<style>
+.box1
+{
+    position:absolute;
+    height:400px;
+    width:400px;
+    background-color: rgb(205, 115, 223);
+    top:20%;
+    left:33%;
+   border-radius: 2%;
+
+}
+h1{
+    font-family: monospace;
+    font-size: 20px;
+    color:black;
+    position: absolute;
+    top:80px;
+    left:550px;
+
+}
+.main{
+    position: absolute;
+    top:40%;
+    left:40%;
+}
+#colorPicker{
+   width:210px;
+   height:50px;
+}
+.p{
+    font-family: monospace;
+}
+#box{
+    width:200px;
+    height: 20px;
+    border-radius: 10px;
+}
+.code
+{
+    position: absolute;
+    top:120px;
+    border-radius: 10px;
+}
+.code2
+{
+    position: absolute;
+    top:-20%;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <center><h1>HexaDecimal Color Picker</h1></center>
+    <div class="box1"></div>
+    
+    <div class="main">
+
+        <div class="code">
+            Hex Code: <br>
+            <input type="text" id="box">
+    </div>
+        <div class="code2">
+            <p>Color Picker</p>
+                     <input type="color" 
+                        id="colorPicker" value="#6a5acd">
+                        <br><br>
+                   
+                </div>
+  
+
+    </div>
+</body>
+<script>
+function myColor() {
+  
+  
+  var color = document.getElementById('colorPicker').value;
+
+  
+ 
+
+  document.getElementById('box').value = color;
+}
+
+document.getElementById('colorPicker').addEventListener('input', myColor);
+</script>
+
+</html>
